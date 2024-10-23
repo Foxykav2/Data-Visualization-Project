@@ -1,8 +1,7 @@
 streamlit
 pandas
-matplotlib.pyplot
+matplotlib
 seaborn
-plotly.graph_objects
-plotly.express
+plotly
 numpy
-streamlit_option_menu
+streamlit-option-menu
