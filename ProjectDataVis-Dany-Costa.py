@@ -6,6 +6,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 import numpy as np
 from streamlit_option_menu import option_menu
+from PIL import Image
+
 
 st.set_page_config(page_title="Tableau de Bord Énergétique", layout="wide")
 
@@ -32,7 +34,7 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-
+logo = Image.open("logo-efrei.65d4f0ab.png")
 
 
 departement = load_data()
@@ -50,6 +52,7 @@ departement = departement.rename(columns=rename_dict)
 
 
 with st.sidebar:
+    st.image(logo, use_column_width=True)
     selected = option_menu("Menu", ["Portfolio", 'Project DataViz (Enedis french energie)',"Context"], 
         icons=['person', 'search'], menu_icon="house", default_index=0)
     st.title("Contact Information")
